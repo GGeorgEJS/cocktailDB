@@ -1,0 +1,16 @@
+<div class="filter" (click)="showMenu()" [class.open]="coctailsService.open"></div>
+<ng-container *ngIf="coctailsService.successLoad; else loader">
+  <div class="drinks-container" *ngFor="let drinks of drinks | keyvalue">
+    <h2 class="drinks-container__title">{{drinks.key}}</h2>
+    <div class="drinks-container__list">
+      <div class="drink" *ngFor="let drink of drinks.value">
+        <img class="drink-image" [src]="drink.strDrinkThumb" alt="">
+        <p class="drink-content">{{drink.strDrink}}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loader>
+  <div class="loading-spinner"></div>
+</ng-template>

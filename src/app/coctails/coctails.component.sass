@@ -1,0 +1,32 @@
+.coctail-container
+    display: flex
+    width: 100%
+    &__filt
+        border-right: 1px solid #D0D0D0
+        padding: 5px
+        width: 15rem
+    &__content
+        width: 89%
+        padding: 10px
+        margin: 10px 20px
+        display: flex
+        align-items: center
+        justify-content: center
+
+@media ( max-width: 500px )
+    .coctail-container
+        &__filt
+            position: absolute
+            background: white
+            width: 94%
+            left: -100%
+            transition: all 0.3s ease
+        &__content
+            margin: 25px 0
+            width: 100%
+        .show
+            left: 0%
+
+
+
+    

@@ -1,0 +1,8 @@
+<div class="filter-list">
+  <div class="filter-list__item" *ngFor="let filter of (filters)" (click)="onModify(filter)">
+    <input class="custom" type="checkbox" [ngModel]="filter.checked">
+    <label class="filter-label">{{filter.strCategory}}</label>
+  </div>
+
+  <button class="filter-button" (click)="onApply()">apply</button>
+</div>
